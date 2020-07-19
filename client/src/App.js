@@ -5,21 +5,13 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            number: 0,
             name: '',
             password: '',
         }
 
-        this.add = this.add.bind(this)
         this.handleChangeName = this.handleChangeName.bind(this)
         this.handleChangePassword = this.handleChangePassword.bind(this)
         this.submit = this.submit.bind(this)
-    }
-
-    add() {
-        this.setState({
-            number: this.state.number + 1,
-        })
     }
 
     handleChangeName({ target: { value } }) {
@@ -44,7 +36,7 @@ class App extends Component {
     }
 
     render() {
-        const { number, name, password } = this.state
+        const { name, password } = this.state
 
         return (
             <Container>
